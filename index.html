@@ -87,7 +87,15 @@
       letter-spacing: 2px;
       text-transform: uppercase;
       color: #8C7B6E;
-      margin-bottom: 26px;
+      margin-bottom: 8px;
+    }
+
+    .intro-date {
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      color: var(--gold-dark);
+      margin-bottom: 22px;
     }
 
     .open-invitation-btn {
@@ -259,18 +267,6 @@
       50% { transform: rotate(8deg); }
     }
 
-    .quote-box {
-      margin: 15px 25px 20px;
-      padding: 12px 18px;
-      background: rgba(255, 255, 255, 0.7);
-      border-left: 3px solid var(--gold);
-      border-radius: 4px;
-      font-size: 13px;
-      font-style: italic;
-      color: var(--text-muted);
-      line-height: 1.5;
-    }
-
     .event-type {
       font-family: 'Cormorant Garamond', serif;
       font-size: 21px;
@@ -286,8 +282,37 @@
       font-size: 56px;
       color: #5C4B3E;
       line-height: 1.1;
-      margin: 10px 0 16px;
+      margin: 10px 0 10px;
       text-shadow: 1px 1px 2px rgba(212,175,55,0.2);
+    }
+
+    /* Insignia central de la fecha */
+    .event-main-date {
+      display: inline-block;
+      margin: 0 auto 16px;
+      padding: 7px 18px;
+      background: linear-gradient(135deg, #FFF6E5 0%, #FAECD1 100%);
+      border: 1.5px solid var(--gold);
+      border-radius: 30px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: #6E4E13;
+      box-shadow: 0 3px 10px rgba(212,175,55,0.12);
+    }
+
+    .quote-box {
+      margin: 5px 25px 20px;
+      padding: 12px 18px;
+      background: rgba(255, 255, 255, 0.7);
+      border-left: 3px solid var(--gold);
+      border-radius: 4px;
+      font-size: 13px;
+      font-style: italic;
+      color: var(--text-muted);
+      line-height: 1.5;
     }
 
     /* Reloj Cuenta Regresiva */
@@ -400,6 +425,25 @@
       color: #3F3732;
     }
 
+    .event-badge-group {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 6px;
+      margin: 6px 0 8px;
+    }
+
+    .event-date-badge {
+      display: inline-block;
+      background: #F8F4EE;
+      color: #6C5A4C;
+      border: 1px solid #E5D7C7;
+      padding: 4px 10px;
+      border-radius: 20px;
+      font-size: 11.5px;
+      font-weight: 600;
+    }
+
     .event-time-badge {
       display: inline-block;
       background: #FFF7E6;
@@ -410,14 +454,13 @@
       font-size: 12px;
       font-weight: 600;
       letter-spacing: 0.5px;
-      margin: 4px 0 6px;
     }
 
     .event-place {
       font-weight: 600;
       color: var(--gold-dark);
       font-size: 14.5px;
-      margin: 2px 0 4px;
+      margin: 4px 0;
     }
 
     .event-address {
@@ -655,6 +698,7 @@
     <div class="intro-badge">✨ Tienes una invitación especial ✨</div>
     <div class="intro-subtitle">Mi Bautizo & 1er Año</div>
     <div class="intro-title">Paulina Elizabeth</div>
+    <div class="intro-date">📅 Sábado 14 de Noviembre, 2026</div>
     
     <!-- Ilustración de apertura con arcoíris animado de derecha a izquierda -->
     <div style="position: relative; width: 190px; height: 115px; margin: 10px 0 25px;">
@@ -781,11 +825,16 @@
       
       <div class="event-type">Mi Bautizo & 1er Año</div>
       <h1 class="name-hero">Paulina Elizabeth</h1>
+
+      <!-- Fecha Principal Destacada -->
+      <div class="event-main-date">
+        📅 Sábado 14 de Noviembre, 2026
+      </div>
     </div>
 
     <!-- Frase Conmemorativa -->
     <div class="quote-box">
-      “Un año de amor, una vida llena de sueños y la bendición de Dios para iluminar mi camino. 🤍✨ Hoy quiero celebrar contigo el comienzo de una hermosa historia.” 🐝🌈
+      “Un añito de amor, una vida llena de sueños y la bendición de Dios para iluminar mi camino. 🤍✨ Hoy quiero celebrar contigo el comienzo de una hermosa historia.” 🐝🌈
     </div>
 
     <!-- Reloj de Cuenta Regresiva -->
@@ -823,14 +872,15 @@
     <!-- Bloques de Ubicación -->
     <div class="cards-container">
       
-      <!-- Ceremonia Religiosa con Horario 12:00 PM -->
+      <!-- Ceremonia Religiosa con Fecha y Horario 12:00 PM -->
       <div class="event-card">
         <div class="event-card-header">
           <span>🕊️</span>
           <h3>Ceremonia Religiosa</h3>
         </div>
-        <div>
-          <span class="event-time-badge">⏰ 11:45 AM</span>
+        <div class="event-badge-group">
+          <span class="event-date-badge">🗓️ Sábado 14 Nov</span>
+          <span class="event-time-badge">⏰ 12:00 PM</span>
         </div>
         <div class="event-place">Parroquia de Nuestra Señora de Fátima</div>
         <p class="event-address">Av. Central 209, Pro Hogar, Azcapotzalco, CDMX</p>
@@ -839,13 +889,14 @@
         </a>
       </div>
 
-      <!-- Recepción con Horario 2:00 PM -->
+      <!-- Recepción con Fecha y Horario 2:00 PM -->
       <div class="event-card">
         <div class="event-card-header">
           <span>🐝</span>
           <h3>Recepción & Festejo</h3>
         </div>
-        <div>
+        <div class="event-badge-group">
+          <span class="event-date-badge">🗓️ Sábado 14 Nov</span>
           <span class="event-time-badge">⏰ A partir de las 2:00 PM</span>
         </div>
         <div class="event-place">Centro Cultural Panamericana</div>
@@ -907,7 +958,7 @@
       <div class="footer-closing">¡Los esperamos con mucho amor!</div>
 
       <div class="footer-subline">
-        Celebración de Paulina Elizabeth • 2026
+        Celebración de Paulina Elizabeth • Sábado 14 de Noviembre, 2026
       </div>
     </footer>
 
@@ -979,14 +1030,14 @@
       }
 
       const phoneNumber = "525511483226";
-      const message = `¡Hola! Confirmo con mucha alegría mi asistencia al Bautizo y 1er Año de Paulina Elizabeth. 🌈🐝\n\n👤 *Invitado / Familia:* ${guestName}\n👥 *Asistentes:* ${guestCount}\n\n¡Nos vemos pronto para celebrar! ✨`;
+      const message = `¡Hola! Confirmo con mucha alegría mi asistencia al Bautizo y 1er Añito de Paulina Elizabeth el Sábado 14 de Noviembre. 🌈🐝\n\n👤 *Invitado / Familia:* ${guestName}\n👥 *Asistentes:* ${guestCount}\n\n¡Nos vemos pronto para celebrar! ✨`;
 
       const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
       window.open(whatsappUrl, '_blank');
     }
 
-    // Cuenta Regresiva (Ajustada exactamente al inicio a las 12:00:00)
-    const eventDate = new Date('2026-11-15T12:00:00').getTime();
+    // Cuenta Regresiva (Ajustada exactamente al Sábado 14 de Noviembre de 2026 a las 12:00:00)
+    const eventDate = new Date('2026-11-14T12:00:00').getTime();
 
     function updateCountdown() {
       const now = new Date().getTime();
@@ -1014,15 +1065,17 @@
     updateCountdown();
     setInterval(updateCountdown, 1000);
 
-    // Archivo .ics para el calendario con los horarios actualizados
+    // Archivo .ics para el calendario con la fecha exacta (14 de Noviembre, 2026)
     function downloadCalendarFile() {
       const icsData = [
         'BEGIN:VCALENDAR',
         'VERSION:2.0',
         'PRODID:-//Invitacion Paulina Elizabeth//ES',
         'BEGIN:VEVENT',
+        'DTSTART:20261114T120000',
+        'DTEND:20261114T200000',
         'SUMMARY:Bautizo y 1er Año - Paulina Elizabeth 🌈🐝',
-        'DESCRIPTION:Celebración del Sacramento del Bautismo y Primer Año de Paulina Elizabeth.\\n\\n🕊️ Ceremonia Religiosa: 12:00 PM - Parroquia Nuestra Señora de Fátima\\n🐝 Recepción: A partir de las 2:00 PM - Centro Cultural Panamericana',
+        'DESCRIPTION:Celebración del Sacramento del Bautismo y Primer Añito de Paulina Elizabeth.\\n\\n🗓️ Fecha: Sábado 14 de Noviembre, 2026\\n🕊️ Ceremonia Religiosa: 12:00 PM - Parroquia Nuestra Señora de Fátima\\n🐝 Recepción: A partir de las 2:00 PM - Centro Cultural Panamericana',
         'LOCATION:Av. Central 209, Pro Hogar, Azcapotzalco, CDMX',
         'STATUS:CONFIRMED',
         'END:VEVENT',
@@ -1032,7 +1085,7 @@
       const blob = new Blob([icsData], { type: 'text/calendar;charset=utf-8' });
       const link = document.createElement('a');
       link.href = window.URL.createObjectURL(blob);
-      link.setAttribute('download', 'Bautizo_Paulina_Elizabeth.ics');
+      link.setAttribute('download', 'Bautizo_Paulina_Elizabeth_14Nov.ics');
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
